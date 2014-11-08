@@ -1,5 +1,28 @@
 Rails.application.routes.draw do
+  get 'static_pages/home'
+  # if the HTTP verb is a GET
+  # and the path of the URL looks like 'static_pages/home'
+  # then route to
+  # the controller "static_pages"
+  # and the action "home"
+
+  get 'static_pages/about'
+  get 'static_pages/services'
+
   resources :posts
+
+#  get '/posts'        => 'posts#index'
+#  get '/posts/1/new'  => 'posts#new'
+#  post '/posts'       => 'posts#create'
+#  get '/posts/1'      => 'posts#show'
+#  get '/posts/1/edit' => 'posts#edit'
+#  patch '/posts/1'    => 'posts#update'
+#  put '/posts/1'      => 'posts#update'
+#  delete '/posts/1'   => 'posts#destroy'
+
+
+
+
   root to: 'posts#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
