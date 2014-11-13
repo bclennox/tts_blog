@@ -1,0 +1,8 @@
+<h1>Hello, <%= @user.first_name %>!</h1>
+
+<ul>
+  <% @user.attributes.each do |a, v| %>
+    <li><%= a.humanize %>: <%= v %></li>
+  <% end %>
+</ul>
+

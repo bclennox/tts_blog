@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   resources :posts
 
+  get 'users/:id' => 'users#show'
+
 #  get '/posts'        => 'posts#index'
 #  get '/posts/1/new'  => 'posts#new'
 #  post '/posts'       => 'posts#create'
